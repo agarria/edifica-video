@@ -1,0 +1,377 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap');
+
+html,
+body {
+    font-family: 'Montserrat', sans-serif;
+	position: relative;
+	display: block;
+	float: left;
+	width: 100%;
+	height: 100%;
+	min-width: 100%;
+	min-height: 100%;
+	padding: 0;
+	margin: 0;
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+
+main {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    background: #eee;
+}
+
+section {
+    position: relative;
+    display: block;
+    float: left;
+    width: 80%;
+    height: 500px;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+}
+
+.video-content {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    z-index: 666;
+    background: #0eb5b9;
+    animation: makecontainer .3s forwards;
+    animation-delay: 2.3s;
+}
+
+@keyframes makecontainer {
+    from { 
+        width: 100%;
+    }
+    to { 
+        width: 50%;
+        background: #fff;
+    }
+}
+
+.video-content .intro-fix .intro-logo svg {
+    fill: #fff;
+    height: 160px;
+}
+
+.intro-logo {
+    position: relative;
+    display: block;
+    float: left;
+    width: auto;
+    height: auto;
+    opacity: 0;
+    animation: showlogo .3s forwards;
+    animation-delay: 1s;
+    transform: translate(0,40px);
+}
+
+@keyframes showlogo {
+    from { 
+        opacity: 0;
+        transform: translate(0,40px);
+    }
+    to { 
+        opacity: 1;
+        transform: translate(0,0);
+    }
+}
+
+.intro-fix {
+    position: relative;
+    display: block;
+    float: left;
+    width: auto;
+    height: auto;
+    padding: 0;
+    margin: 0;
+    opacity: 1;
+    animation: hidelogo .3s forwards;
+    animation-delay: 2s;
+}
+
+@keyframes hidelogo {
+    from { 
+        opacity: 1;
+    }
+    to { 
+        opacity: 0;
+    }
+}
+
+.video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+.video video {
+    height: 100%;
+    margin: 0 0 0 -50px;
+    transform: rotateY(180deg);
+    -webkit-transform:rotateY(180deg);
+    -moz-transform:rotateY(180deg);
+}
+
+
+.outro-content {
+    position: relative;
+    display: block;
+    float: left;
+    width: 100%;
+    height: auto;
+    padding: 0;
+    margin: 0;
+}
+
+.outro-logo,
+.outro-site,
+.link-1,
+.link-2,
+.link-3 {
+    opacity: 0;
+    transform: translate(0,20px);
+    animation: showlast .3s forwards;
+    animation-delay: 8.6s;
+}
+
+.link-1 {
+    animation-delay: 8.7s;
+}
+
+.link-2 {
+    animation-delay: 8.8s;
+}
+
+.link-3 {
+    animation-delay: 8.9s;
+}
+
+@keyframes showlast {
+    from { 
+        opacity: 0;
+        transform: translate(0,20px);
+    }
+    to { 
+        opacity: 1;
+        transform: translate(0,0);
+    }
+}
+
+.outro {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 0;
+    right: 0;
+    width: 50%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    z-index: 9999;
+    animation: showoutro .3s forwards;
+    animation-delay: 8.3s;
+}
+
+@keyframes showoutro {
+    from { 
+        width: 50%;
+        background: transparent;
+    }
+    to { 
+        width: 100%;
+        background: #0eb5b9;
+    }
+}
+
+.text {
+    position: absolute;
+    display: block;
+    top: 0;
+    right: 0;
+    width: 50%;
+    height: 100%;
+    padding: 5%;
+    margin: 0;
+    opacity: 1;
+    z-index: 999;
+    opacity: 1;
+    animation: hidetext .3s forwards;
+    animation-delay: 8s;
+}
+
+@keyframes hidetext {
+    from { 
+        opacity: 1;
+    }
+    to { 
+        opacity: 0;
+    }
+}
+
+.content-logo,
+.content-name,
+.text-1,
+.text-2,
+.text-3,
+.site {
+    opacity: 0;
+    transform: translate(0,20px);
+    animation: showcontent .3s forwards;
+    animation-delay: 2.6s;
+}
+
+.text-1 {
+    animation-delay: 2.7s;
+}
+
+.text-2 {
+    animation-delay: 2.8s;
+}
+
+.text-3 {
+    animation-delay: 2.9s;
+}
+
+@keyframes showcontent {
+    from { 
+        opacity: 0;
+        transform: translate(0,20px);
+    }
+    to { 
+        opacity: 1;
+        transform: translate(0,0);
+    }
+}
+
+.content-logo {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    float: left;
+    width: 100%;
+    height: 60px;
+    padding: 0;
+    margin: 0 0 4% 0;
+}
+
+.content-logo svg {
+    fill: #999;
+    width: auto;
+    height: 100%;
+}
+
+.content-name {
+    display: block;
+    float: left;
+    width: 100%;
+    font-weight: 700;
+    font-size: 20px;
+    color: #999;
+    margin: 0 0 4% 0;
+    text-align: right;
+}
+
+.content-text {
+    display: block;
+    float: left;
+    width: 100%;
+    font-weight: 500;
+    font-size: 18px;
+    color: #999;
+    text-align: right;
+}
+
+.content-text.text-3 {
+    margin: 0;
+}
+
+.site {
+    position: absolute;
+    display: block;
+    bottom: 5%;
+    left: 5%;
+    width: auto;
+    font-weight: 400;
+    font-size: 12px;
+    color: #999;
+    margin: 0;
+}
+
+.outro-logo {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    float: left;
+    width: 100%;
+    height: 120px;
+    margin: 0 0 2% 0;
+}
+
+.outro-logo svg {
+    fill: #fff;
+    height: 120px;
+}
+
+.outro-site {
+    display: block;
+    float: left;
+    width: 100%;
+    font-weight: 500;
+    font-size: 16px;
+    color: #fff;
+    text-align: center;
+}
+
+.outro-links {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    float: left;
+    width: 100%;
+    height: auto;
+    padding: 0;
+    margin: 5% 0 0 0;
+}
+
+.link-icon svg {
+    width: auto;
+    margin: 0 10px;
+    fill: #fff;
+    height: 40px;
+}
